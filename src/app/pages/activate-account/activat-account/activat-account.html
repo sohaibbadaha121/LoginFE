@@ -1,15 +1,15 @@
 <div class="container" *ngIf="success; else codeForm">
   <div class="activate" *ngIf="isOk; else error">
-    <h2>Activation Successful</h2>
-    <p>{{ message }}</p>
-    <button class="btn" (click)="goToLogin()">Login</button>
+    <h2 class="success-title">✅ Activation Successful</h2>
+    <p class="message">{{ message }}</p>
+    <button class="btn primary" (click)="goToLogin()">Login</button>
   </div>
+
   <ng-template #error>
     <div class="activate-error">
-      <h2>Activation Failed</h2>
-
-      <p>{{ message }}</p>
-      <button class="btn" (click)="tryAgain()">Try Again</button>
+      <h2 class="error-title">❌ Activation Failed</h2>
+      <p class="message">{{ message }}</p>
+      <button class="btn danger" (click)="tryAgain()">Try Again</button>
     </div>
   </ng-template>
 </div>

@@ -1,10 +1,10 @@
 import { confirm } from '../../../services/functions';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CodeInputModule } from 'angular-code-input';
+import { CodeInputComponent, CodeInputModule } from 'angular-code-input';
 
 @Component({
   selector: 'app-activat-account',
@@ -16,6 +16,8 @@ export class ActivatAccount {
   message: string = '';
   isOk: boolean = true;
   success: boolean = false;
+
+  @ViewChild(CodeInputComponent) codeInput!: CodeInputComponent;
 
   private http = inject(HttpClient);
   private router = inject(Router);
@@ -39,6 +41,12 @@ export class ActivatAccount {
           'Activation failed. The token may be invalid or expired.';
         this.success = true;
         this.isOk = false;
+
+        // ✅ إفراغ الكود حتى يستطيع المستخدم إعادة الإدخال فوراً
+        if (this.codeInput) {
+          this.codeInput.reset();
+        }
+
         console.error('Activation error:', err);
       },
     });
@@ -52,5 +60,8 @@ export class ActivatAccount {
     this.success = false;
     this.isOk = true;
     this.message = '';
+    if (this.codeInput) {
+      this.codeInput.reset();
+    }
   }
 }

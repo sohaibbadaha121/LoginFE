@@ -13,6 +13,14 @@
   flex-direction: column;
 }
 
+.login-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #22c55e;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .login-container {
     flex-direction: row;

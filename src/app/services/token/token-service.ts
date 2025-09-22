@@ -15,13 +15,4 @@ export class TokenService {
   get token(): string | null {
     return localStorage.getItem('authToken');
   }
-
-  // Additional useful methods
-  removeToken(): void {
-    localStorage.removeItem('authToken');
-  }
-
-  isTokenValid(): boolean {
-    return !!this.token;
-  }
 }

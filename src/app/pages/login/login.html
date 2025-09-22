@@ -1,5 +1,6 @@
-<h1 class="login">Login</h1>
 <div class="card">
+  <h2 class="login-title">Login</h2>
+
   <div class="login-container">
     <div class="login-box">
       <div class="form-group">
@@ -31,6 +32,7 @@
           label="Login"
           icon="pi pi-user"
           (onClick)="login()"
+          styleClass="login-btn"
         ></p-button>
       </div>
     </div>
@@ -43,12 +45,14 @@
         ><b>OR</b></p-divider
       >
     </div>
+
     <div class="signup-box">
       <p-button
         label="Sign Up"
         icon="pi pi-user-plus"
         (onClick)="register()"
         severity="success"
+        styleClass="signup-btn"
       ></p-button>
     </div>
   </div>
