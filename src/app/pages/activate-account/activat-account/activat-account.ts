@@ -42,7 +42,6 @@ export class ActivatAccount {
         this.success = true;
         this.isOk = false;
 
-        // ✅ إفراغ الكود حتى يستطيع المستخدم إعادة الإدخال فوراً
         if (this.codeInput) {
           this.codeInput.reset();
         }
