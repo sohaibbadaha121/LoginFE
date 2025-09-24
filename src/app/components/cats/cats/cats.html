@@ -1,0 +1,28 @@
+<div id="head">
+  <h1 id="title">CataLog</h1>
+  <nav class="nav">
+    <a routerLink="/cats" routerLinkActive="active" (click)="gotohome()"
+      >Home</a
+    >
+    <a
+      routerLink="/favorites"
+      routerLinkActive="active"
+      (click)="gotofavorites()"
+      >Favorites</a
+    >
+  </nav>
+</div>
+<div id="cats">
+  <div class="catimg" *ngFor="let cat of cats">
+    <img [src]="cat.imageUrl" alt="cat" />
+    <button (click)="toggleFavorite(cat.id)">
+      {{ isFavorite(cat.id) ? "❤️" : "🤍" }}
+    </button>
+  </div>
+</div>
+
+<div class="pagination">
+  <button (click)="prevPage()">Previous</button>
+  <button (click)="nextPage()">Next</button>
+</div>
+<button (click)="logout()">Logout</button>

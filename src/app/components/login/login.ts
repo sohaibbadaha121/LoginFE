@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { AuthenticationRequest } from '../../services/models/authentication-request';
+import { AuthenticationRequest } from '../../services/openapiServices/models/authentication-request';
 import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -7,8 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { authenticate } from '../../services/fn/auth-controller/authenticate';
-import { TokenService } from '../../services/token/token-service';
+import { authenticate } from '../../services/openapiServices/fn/auth-controller/authenticate';
+import { TokenService } from '../../services/tokenService/token-service';
 
 @Component({
   selector: 'app-login',
@@ -53,7 +53,8 @@ export class Login {
         const authResponse = response.body;
         if (authResponse?.token) {
           this.tokenservice.token = authResponse.token;
-          this.router.navigate(['/dashboard']);
+          this.tokenservice.email = authResponse.email;
+          this.router.navigate(['/cats']);
         }
         this.loading = false;
       },

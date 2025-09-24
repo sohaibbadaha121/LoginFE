@@ -1,4 +1,4 @@
-import { confirm } from '../../../services/functions';
+import { confirm } from '../../../services/openapiServices/functions';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
@@ -34,7 +34,6 @@ export class ActivatAccount {
         this.success = true;
         this.isOk = true;
         console.log('Account activated successfully:', response);
-        this.router.navigate(['/login']);
       },
       error: (err) => {
         this.message =
@@ -42,7 +41,6 @@ export class ActivatAccount {
         this.success = true;
         this.isOk = false;
 
-        // ✅ إفراغ الكود حتى يستطيع المستخدم إعادة الإدخال فوراً
         if (this.codeInput) {
           this.codeInput.reset();
         }
