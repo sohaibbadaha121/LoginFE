@@ -7,7 +7,7 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
-import { RegistrationRequest } from '../../models/registration-request';
+import { RegistrationRequest } from '../../openapiServices/models/registration-request';
 
 export interface Register$Params {
   body: RegistrationRequest;

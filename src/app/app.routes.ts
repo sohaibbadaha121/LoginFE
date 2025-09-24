@@ -3,11 +3,6 @@ import { authGuard } from './authGuard/auth-guard';
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'cats',
-    pathMatch: 'full',
-  },
-  {
     path: 'login',
     loadComponent: () => import('./pages/login/login').then((m) => m.Login),
   },
@@ -35,5 +30,10 @@ export const routes: Routes = [
         (m) => m.FavoritesComponent
       ),
     canActivate: [authGuard],
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
 ];

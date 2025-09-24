@@ -7,8 +7,8 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
-import { AuthenticationRequest } from '../../models/authentication-request';
-import { AuthenticationResponse } from '../../models/authentication-response';
+import { AuthenticationRequest } from '../../openapiServices/models/authentication-request';
+import { AuthenticationResponse } from '../../openapiServices/models/authentication-response';
 
 export interface Authenticate$Params {
   body: AuthenticationRequest;

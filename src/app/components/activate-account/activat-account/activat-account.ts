@@ -1,4 +1,4 @@
-import { confirm } from '../../../services/functions';
+import { confirm } from '../../../services/openapiServices/functions';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';

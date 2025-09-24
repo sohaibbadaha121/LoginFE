@@ -6,10 +6,10 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { TokenService } from '../../../services/token/token-service';
+import { TokenService } from '../../../services/tokenService/token-service';
 import { Router } from '@angular/router';
-import { FavoritesService } from '../../../services/favorites.service';
-import { CatService } from '../../../services/cat.service';
+import { FavoritesService } from '../../../services/favoritesApiService/favorites.service';
+import { CatService } from '../../../services/catApiService/cat.service';
 
 @Component({
   selector: 'app-cats',

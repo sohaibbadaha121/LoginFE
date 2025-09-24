@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RegistrationRequest } from '../../../services/models';
+import { RegistrationRequest } from '../../../services/openapiServices/models';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
 import { InputTextModule } from 'primeng/inputtext';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { register } from '../../../services/fn/auth-controller/register';
+import { register } from '../../../services/openapiServices/fn/auth-controller/register';
 
 @Component({
   selector: 'app-register',

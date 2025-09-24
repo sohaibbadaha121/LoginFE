@@ -1,8 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { FavoritesService } from '../../../services/favorites.service';
-import { TokenService } from '../../../services/token/token-service';
+import { FavoritesService } from '../../../services/favoritesApiService/favorites.service';
+import { TokenService } from '../../../services/tokenService/token-service';
 
 @Component({
   selector: 'app-favorites',

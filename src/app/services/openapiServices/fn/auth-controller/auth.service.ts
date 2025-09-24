@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpContext } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StrictHttpResponse } from '../../strict-http-response';
-import { AuthenticationRequest } from '../../models/authentication-request';
-import { AuthenticationResponse } from '../../models/authentication-response';
+import { AuthenticationRequest } from '../../openapiServices/models/authentication-request';
+import { AuthenticationResponse } from '../../openapiServices/models/authentication-response';
 import { authenticate } from './authenticate';
 
 @Injectable({
