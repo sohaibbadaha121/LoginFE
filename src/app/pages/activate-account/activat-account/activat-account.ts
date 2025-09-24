@@ -34,7 +34,6 @@ export class ActivatAccount {
         this.success = true;
         this.isOk = true;
         console.log('Account activated successfully:', response);
-        this.router.navigate(['/login']);
       },
       error: (err) => {
         this.message =

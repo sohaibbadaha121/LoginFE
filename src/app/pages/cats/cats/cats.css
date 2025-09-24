@@ -1,0 +1,113 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+#head {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  text-align: center;
+  border: 0.1rem solid #e9ecef;
+  border-radius: 1rem;
+  width: 95.5%;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+#title {
+  color: #2c3e50;
+}
+#head img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
+}
+nav {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d4a373;
+  font-weight: bold;
+  font-size: large;
+  padding: 0.2rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+#cats {
+  display: grid;
+  grid-template-columns: repeat(4, 27rem);
+  gap: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+.pagination button {
+  padding: 0.3rem 0.5rem;
+  border: 0.1rem solid #d4a373;
+  border-radius: 0.7rem;
+  background-color: #d4a373;
+  color: #2c3e50;
+  cursor: pointer;
+}
+.catimg {
+  background-color: #f8f9fa;
+  overflow: hidden;
+  text-align: center;
+  gap: 0;
+}
+.catimg img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+@media (max-width: 1541px) {
+  #cats {
+    grid-template-columns: repeat(3, 27rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  #cats {
+    grid-template-columns: repeat(2, 27rem);
+  }
+  #head {
+    padding: 1%;
+  }
+  nav {
+    margin-top: 2rem;
+    margin-right: 0.1rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #cats {
+    grid-template-columns: repeat(1, 27rem);
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+}

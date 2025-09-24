@@ -1,0 +1,25 @@
+<div id="head">
+  <h1 id="title">CataLog</h1>
+  <nav class="nav">
+    <a routerLink="/cats" routerLinkActive="active" (click)="gotohome()"
+      >Home</a
+    >
+    <a
+      routerLink="/favorites"
+      routerLinkActive="active"
+      (click)="gotofavorites()"
+      >Favorites</a
+    >
+  </nav>
+</div>
+
+<div id="cats" *ngIf="favorites && favorites.length > 0; else noFavorites">
+  <div class="catimg" *ngFor="let catId of favorites">
+    <img [src]="'https://cataas.com/cat/' + catId" alt="cat" />
+    <button class="favorite-btn" (click)="removeFavorite(catId)">Delete</button>
+  </div>
+</div>
+
+<ng-template #noFavorites>
+  <p>No Favorite Cats</p>
+</ng-template>

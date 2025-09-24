@@ -53,7 +53,8 @@ export class Login {
         const authResponse = response.body;
         if (authResponse?.token) {
           this.tokenservice.token = authResponse.token;
-          this.router.navigate(['/dashboard']);
+          this.tokenservice.email = authResponse.email;
+          this.router.navigate(['/cats']);
         }
         this.loading = false;
       },
